@@ -5,7 +5,7 @@ import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
-import Approach from "@/components/Approach";
+import Workflow from "@/components/Workflow";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
         <Hero />
         <Grid />
         <Projects />
-        <Approach />
+        <Workflow />
       </div>
     </main>
   );

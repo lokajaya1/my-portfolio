@@ -3,38 +3,35 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 
-const Approach = () => {
+const Workflow = () => {
   return (
     <section className="w-full py-20 bg-dark-900 relative overflow-hidden">
       <h1 className="text-center text-4xl font-bold text-white mb-10 relative z-10">
-        My <span className="text-purple">approach</span>
+        My <span className="text-purple">Workflow</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full px-6 relative z-10">
         <HoverBorderGradient className="w-full">
           <Card
-            title="Planning & Strategy"
-            icon={<AceternityIcon order="Phase 1" />}
-            des="We'll collaborate to map out your website's goals, target audience, 
-            and key functionalities. We'll discuss things like site structure, 
-            navigation, and content requirements."
+            title="Planning & Learning"
+            icon={<AceternityIcon order="Step 1" />}
+            des="We'll start by discussing your website's goals and what you want to achieve. 
+            This includes understanding target audience and planning the site's structure."
           />
         </HoverBorderGradient>
         <HoverBorderGradient className="w-full">
           <Card
-            title="Development & Progress Update"
-            icon={<AceternityIcon order="Phase 2" />}
-            des="Once we agree on the plan, I cue my lofi playlist and dive into
-            coding. From initial sketches to polished code, I keep you updated
-            every step of the way."
+            title="Coding & Building"
+            icon={<AceternityIcon order="Step 2" />}
+            des="Once the plan is set, I'll begin coding the website. I'll keep you updated 
+            with regular progress reports and make adjustments based on your feedback."
           />
         </HoverBorderGradient>
         <HoverBorderGradient className="w-full">
           <Card
-            title="Development & Launch"
-            icon={<AceternityIcon order="Phase 3" />}
-            des="This is where the magic happens! Based on the approved design, 
-            I'll translate everything into functional code, building your website
-            from the ground up."
+            title="Testing & Launch"
+            icon={<AceternityIcon order="Step 3" />}
+            des="After development, I'll test the website to ensure everything works smoothly. 
+            Then, we'll launch your site and make it live for the world to see."
           />
         </HoverBorderGradient>
       </div>
@@ -42,7 +39,7 @@ const Approach = () => {
   );
 };
 
-export default Approach;
+export default Workflow;
 
 const Card = ({
   title,
