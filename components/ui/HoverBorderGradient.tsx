@@ -67,7 +67,7 @@ export function HoverBorderGradient({
     >
       <div
         className={cn(
-          "relative z-10 bg-dark-800 rounded-3xl w-full h-full",
+          "relative z-10 bg-black-300 rounded-3xl w-full h-full",
           className
         )}
       >
@@ -88,7 +88,7 @@ export function HoverBorderGradient({
         }}
         transition={{ ease: "linear", duration: duration ?? 1 }}
       />
-      <div className="absolute inset-[2px] z-1 rounded-3xl bg-dark-800" />
+      <div className="absolute inset-[2px] z-1 rounded-3xl bg-black-300" />
     </Tag>
   );
 }

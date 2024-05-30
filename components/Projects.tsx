@@ -7,7 +7,7 @@ import { ProjectAnimated } from "./ui/ProjectAnimated";
 
 const Projects = () => {
   return (
-    <div id="projects" className="py-10 px-8 bg-dark">
+    <div id="projects" className="py-6 px-8 bg-black">
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mt-8 mb-16">
         A small selection of <span className="text-purple">Projects</span>
       </h1>
@@ -15,7 +15,7 @@ const Projects = () => {
         {projects.map((item) => (
           <div key={item.id} className="flex justify-center">
             <ProjectAnimated title={item.title} href={item.link}>
-              <div className="flex flex-col items-center bg-grey-800 rounded-lg shadow-lg overflow-hidden w-full">
+              <div className="flex flex-col items-center bg-grey-100 rounded-lg shadow-lg overflow-hidden w-full">
                 <div className="relative w-full h-48 lg:h-64">
                   <Image
                     src={item.img}

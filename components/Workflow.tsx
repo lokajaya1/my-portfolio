@@ -5,7 +5,7 @@ import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 
 const Workflow = () => {
   return (
-    <section id="workflow" className="w-full py-10 bg-dark-900 relative overflow-hidden">
+    <section id="workflow" className="w-full py-10 bg-black relative overflow-hidden">
       <h1 className="text-center text-4xl font-bold text-white mb-10 relative z-10">
         My <span className="text-purple">Workflow</span>
       </h1>
@@ -60,12 +60,7 @@ const Card = ({
       initial={{ scale: 1 }}
       animate={{ scale: hovered ? 1.05 : 1 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className={`border border-black/[0.2] dark:border-white/[0.2] w-full h-full p-6 lg:p-8 relative rounded-3xl bg-dark-800 text-white shadow-lg ${className}`}
-      style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-      }}
+      className={`border border-black/[0.2] dark:border-white/[0.2] w-full h-full p-6 lg:p-8 relative rounded-3xl bg-black dark:bg-black-200 text-white shadow-lg ${className}`}
     >
       <Icon className="absolute h-10 w-10 -top-3 -left-3 dark:text-white text-black opacity-30" />
       <Icon className="absolute h-10 w-10 -bottom-3 -left-3 dark:text-white text-black opacity-30" />
@@ -74,8 +69,8 @@ const Card = ({
 
       <div className="relative z-20 text-center flex flex-col justify-center items-center h-full">
         <div className="mb-4">{icon}</div>
-        <h2 className="dark:text-white text-2xl font-bold">{title}</h2>
-        <p className="mt-4" style={{ color: "#E4ECFF" }}>
+        <h2 className="text-2xl font-bold">{title}</h2>
+        <p className="mt-4 text-white-200">
           {des}
         </p>
       </div>
@@ -88,7 +83,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
     <div className="flex items-center justify-center mb-4">
       <span
         className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-slate-950 px-3 py-1 text-white backdrop-blur-3xl font-bold text-lg"
+        justify-center rounded-full bg-gray-900 px-3 py-1 text-white backdrop-blur-3xl font-bold text-lg"
       >
         {order}
       </span>
