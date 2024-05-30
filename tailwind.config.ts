@@ -28,20 +28,38 @@ const config = {
     extend: {
       colors: {
         black: {
-          DEFAULT: "#000",
-          100: "#000319",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
+          DEFAULT: "#000000", // Warna hitam pekat
+          100: "#0A0A0A", // Hitam sedikit lebih terang untuk elemen sekunder
+          200: "#141414", // Warna abu-abu sangat gelap
+          300: "#1F1F1F", // Warna abu-abu gelap untuk batas atau garis
         },
         white: {
-          DEFAULT: "#FFF",
-          100: "#BEC1DD",
-          200: "#C1C2D3",
+          DEFAULT: "#FFFFFF", // Warna putih penuh untuk teks dan elemen yang sangat kontras
+          100: "#E5E5E5", // Warna putih redup untuk elemen sekunder
+          200: "#CCCCCC", // Warna putih lebih gelap
+        },
+        gray: {
+          100: "#333333", // Warna abu-abu gelap untuk latar belakang kartu atau panel
+          200: "#4F4F4F", // Warna abu-abu sedang
+          300: "#7F7F7F", // Warna abu-abu terang untuk teks yang tidak terlalu penting
         },
         blue: {
-          "100": "#E4ECFF",
+          DEFAULT: "#1E3A8A", // Warna biru tua untuk elemen interaktif utama seperti tombol
+          100: "#3B82F6", // Warna biru untuk hover atau aktif pada elemen interaktif
         },
-        purple: "#CBACF9",
+        purple: "#CBACF9", // Warna ungu untuk aksen atau elemen penting
+        green: {
+          DEFAULT: "#10B981", // Warna hijau untuk status sukses atau positif
+          100: "#34D399", // Warna hijau terang untuk hover atau aktif
+        },
+        red: {
+          DEFAULT: "#EF4444", // Warna merah untuk status error atau peringatan
+          100: "#F87171", // Warna merah terang untuk hover atau aktif
+        },
+        yellow: {
+          DEFAULT: "#F59E0B", // Warna kuning untuk status peringatan
+          100: "#FBBF24", // Warna kuning terang untuk hover atau aktif
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

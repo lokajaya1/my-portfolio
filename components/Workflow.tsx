@@ -5,7 +5,7 @@ import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 
 const Workflow = () => {
   return (
-    <section className="w-full py-20 bg-dark-900 relative overflow-hidden">
+    <section id="workflow" className="w-full py-10 bg-dark-900 relative overflow-hidden">
       <h1 className="text-center text-4xl font-bold text-white mb-10 relative z-10">
         My <span className="text-purple">Workflow</span>
       </h1>
