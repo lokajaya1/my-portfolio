@@ -83,7 +83,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
     <div className="flex items-center justify-center mb-4">
       <span
         className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-gray-900 px-3 py-1 text-white backdrop-blur-3xl font-bold text-lg"
+        justify-center rounded-full px-2 text-white backdrop-blur-3xl font-bold text-lg"
       >
         {order}
       </span>

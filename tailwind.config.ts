@@ -1,13 +1,11 @@
 import type { Config } from "tailwindcss";
-
 const svgToDataUri = require("mini-svg-data-uri");
-
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -16,7 +14,6 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./data/**/*.{ts,tsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -28,37 +25,70 @@ const config = {
     extend: {
       colors: {
         black: {
-          DEFAULT: "#000000", // Warna hitam pekat
-          100: "#0A0A0A", // Hitam sedikit lebih terang untuk elemen sekunder
-          200: "#141414", // Warna abu-abu sangat gelap
-          300: "#1F1F1F", // Warna abu-abu gelap untuk batas atau garis
+          DEFAULT: "#000000",
+          100: "#0A0A0A",
+          200: "#141414",
+          300: "#1F1F1F",
         },
         white: {
-          DEFAULT: "#FFFFFF", // Warna putih penuh untuk teks dan elemen yang sangat kontras
-          100: "#E5E5E5", // Warna putih redup untuk elemen sekunder
-          200: "#CCCCCC", // Warna putih lebih gelap
+          DEFAULT: "#FFFFFF",
+          100: "#E5E5E5",
+          200: "#CCCCCC",
         },
         gray: {
-          100: "#333333", // Warna abu-abu gelap untuk latar belakang kartu atau panel
-          200: "#4F4F4F", // Warna abu-abu sedang
-          300: "#7F7F7F", // Warna abu-abu terang untuk teks yang tidak terlalu penting
+          100: "#333333",
+          200: "#4F4F4F",
+          300: "#7F7F7F",
+          400: "#9E9E9E",
+          500: "#B2B2B2",
+          600: "#CCCCCC",
+          700: "#E6E6E6",
+          800: "#F2F2F2",
+          900: "#F7F7F7",
+        },
+        neutral: {
+          50: '#F7FAFC',
+          100: '#EDF2F7',
+          200: '#E2E8F0',
+          300: '#CBD5E0',
+          400: '#A0AEC0',
+          500: '#718096',
+          600: '#4A5568',
+          700: '#2D3748',
+          800: '#1A202C',
+          900: '#171923',
         },
         blue: {
-          DEFAULT: "#1E3A8A", // Warna biru tua untuk elemen interaktif utama seperti tombol
-          100: "#3B82F6", // Warna biru untuk hover atau aktif pada elemen interaktif
+          DEFAULT: "#1E3A8A",
+          100: "#EBF8FF",
+          200: "#BEE3F8",
+          300: "#90CDF4",
+          400: "#63B3ED",
+          500: "#4299E1",
+          600: "#3182CE",
+          700: "#2B6CB0",
+          800: "#2A4365",
+          900: "#1A365D",
         },
-        purple: "#CBACF9", // Warna ungu untuk aksen atau elemen penting
+        purple: {
+          DEFAULT: "#CBACF9",
+          100: "#E9D5FF",
+          200: "#D8B4FE",
+          300: "#C084FC",
+          400: "#A855F7",
+          500: "#9333EA",
+        },
         green: {
-          DEFAULT: "#10B981", // Warna hijau untuk status sukses atau positif
-          100: "#34D399", // Warna hijau terang untuk hover atau aktif
+          DEFAULT: "#10B981",
+          100: "#34D399",
         },
         red: {
-          DEFAULT: "#EF4444", // Warna merah untuk status error atau peringatan
-          100: "#F87171", // Warna merah terang untuk hover atau aktif
+          DEFAULT: "#EF4444",
+          100: "#F87171",
         },
         yellow: {
-          DEFAULT: "#F59E0B", // Warna kuning untuk status peringatan
-          100: "#FBBF24", // Warna kuning terang untuk hover atau aktif
+          DEFAULT: "#F59E0B",
+          100: "#FBBF24",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -164,6 +194,16 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -177,6 +217,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        fadeInUp: "fadeInUp 1s ease-out",
       },
     },
   },
