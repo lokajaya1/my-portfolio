@@ -5,9 +5,12 @@ import { FaLaptopCode } from "react-icons/fa";
 
 const Experience = () => {
   return (
-    <div className="py-20 w-full bg-black text-white">
-      <h1 className="text-4xl font-bold text-center mb-10">
-        My <span className="text-purple">Experience</span>
+    <div className="py-10 w-full bg-black text-white">
+      <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+        My{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-purple-200 to-purple-400">
+          Experience
+        </span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">

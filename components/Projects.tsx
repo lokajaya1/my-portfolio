@@ -8,9 +8,9 @@ import { ProjectAnimated } from "./ui/ProjectAnimated";
 const Projects = () => {
   return (
     <div id="projects" className="py-6 px-8 bg-black">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center text-white mt-8 mb-16">
-        A small selection of <span className="text-purple">Projects</span>
-      </h1>
+      <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+  My <span className="bg-clip-text text-transparent bg-gradient-to-b from-purple-200 to-purple-400">Projects</span>
+</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((item) => (
           <div key={item.id} className="flex justify-center">

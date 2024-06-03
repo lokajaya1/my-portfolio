@@ -60,9 +60,8 @@ export const BentoGridItem: React.FC<BentoGridItemProps> = ({
           <Image
             src={img}
             alt="Image"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
             className={cn(imgClassName, "transition-transform duration-500 group-hover:scale-110")}
           />
         )}
@@ -70,9 +69,8 @@ export const BentoGridItem: React.FC<BentoGridItemProps> = ({
           <Image
             src={spareImg}
             alt="Spare Image"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
             className={cn(imgClassName, "transition-transform duration-500 group-hover:scale-110")}
           />
         )}
