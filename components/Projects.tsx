@@ -2,15 +2,18 @@
 
 import React from "react";
 import Image from "next/legacy/image";
-import { projects } from "@/data"; 
-import { ProjectAnimated } from "./ui/ProjectAnimated"; 
+import { projects } from "@/data";
+import { ProjectAnimated } from "./ui/ProjectAnimated";
 
 const Projects = () => {
   return (
     <div id="projects" className="py-6 px-8">
       <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-  My <span className="bg-clip-text text-transparent bg-gradient-to-b from-purple-200 to-purple-400">Projects</span>
-</h1>
+        My{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-b from-purple-200 to-purple-400">
+          Projects
+        </span>
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((item) => (
           <div key={item.id} className="flex justify-center">
