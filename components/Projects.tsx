@@ -8,8 +8,8 @@ import { ProjectAnimated } from "./ui/ProjectAnimated";
 const Projects = () => {
   return (
     <div id="projects" className="py-12 px-8">
-      <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-        My
+      <h1 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 mb-10 relative z-10">
+        My{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-purple-200 to-purple-400">
           Projects
         </span>
