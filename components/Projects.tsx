@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/legacy/image";
 import { projects } from "@/data";
 import { ProjectAnimated } from "./ui/ProjectAnimated";
 
 const Projects = () => {
   return (
-    <div id="projects" className="py-6 px-8">
+    <div id="projects" className="py-12 px-8">
       <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
         My
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-purple-200 to-purple-400">
@@ -22,23 +22,15 @@ const Projects = () => {
               href={item.link}
               description={item.des}
             >
-              <div className="flex flex-col items-center bg-gray-100 rounded-lg shadow-lg overflow-hidden w-full">
-                <div className="relative w-full h-48 lg:h-64">
+              <div className="flex flex-col items-center bg-gray-100 rounded-lg shadow-lg overflow-hidden w-full h-full">
+                <div className="relative w-full h-64">
                   <Image
                     src={item.img}
                     alt={item.title}
                     layout="fill"
-                    objectFit="cover"
-                    className="absolute w-full h-full"
+                    objectFit="cover" // Ensures the image fills the card while maintaining aspect ratio
+                    className="absolute inset-0 object-cover rounded-t-lg" // Cover the entire div
                   />
-                </div>
-                <div className="p-4 w-full text-center">
-                  <h1 className="font-bold text-xl lg:text-2xl mb-2 text-neutral-800">
-                    {item.title}
-                  </h1>
-                  <p className="text-neutral-600 text-sm lg:text-base mb-4">
-                    {item.des}
-                  </p>
                 </div>
               </div>
             </ProjectAnimated>

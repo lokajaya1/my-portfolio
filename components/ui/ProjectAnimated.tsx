@@ -9,7 +9,6 @@ interface ProjectAnimatedProps {
   title: string;
   description?: string;
   href?: string;
-  technologies?: string[];
   className?: string;
   containerClassName?: string;
 }
@@ -19,7 +18,6 @@ export const ProjectAnimated: React.FC<ProjectAnimatedProps> = ({
   title,
   description,
   href,
-  technologies = [],
   className,
   containerClassName,
 }) => {
@@ -83,23 +81,9 @@ export const ProjectAnimated: React.FC<ProjectAnimatedProps> = ({
             )}
           </div>
         </div>
-
-        {/* Technologies */}
-        {technologies.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-2 py-1 text-xs font-medium bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
 
-      {/* Hover Details */}
+      {/* Hover Details (Only show on hover) */}
       {isHovered && description && (
         <motion.div
           className="absolute inset-0 bg-black/80 text-white flex flex-col justify-center items-center p-4 text-center"
